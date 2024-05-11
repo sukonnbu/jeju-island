@@ -10,14 +10,20 @@ function Items() {
           <summary>감귤</summary>
           <p>
             제주도하면 딱 귤이 떠오르는 사람들이 있을 것이다. <br />
-            유명한 감귤류로는 귤 이외에도 한라봉, 천혜향, 레드향 등이 있는데 이의 차이점을 알아보자. <br />
+            유명한 감귤류로는 귤 이외에도 한라봉, 천혜향, 레드향 등이 있는데 이의 차이점을 알아보자. <br /> <br />
             레드향은 껍질의 빛이 붉어 레드향이라고 이름 붙여졌다. 껍질이 두껍고 울퉁불퉁하다는 특징이 있다. 제철은 1월~3월이다. <br />
           </p>
-
+          <img src="https://i.namu.wiki/i/yCzvUUzVE783nAKkaGQkp6_r4MnofcVmGGyB9gW7C-fdp1tWpaHa8bTuvSAOQZZbCb6aawNXTKAfsdCi1L6fGZ9wuNIUxhGVwpOOp7zfkFW-rVMhzXuzZUpmJTXbh5WwITPbeGYWIXs1SETT19334A.webp" alt="레드향 사진" />
           <p>
+            <br />
             천혜향은 향이 천리를 간다고 하여 천혜향이라고 이름 붙여졌다. 껍질이 얇은 편이라는 특징이 있다. 제철은 1월~4월이다. <br />
+          </p>
+          <img src="https://i.namu.wiki/i/OI7dPy5ZVamddke-24lpmDDZB3sHMnMJVbxbvAymrqyiVvTYX45RpMCgf-BoqzI8HMFV-Y0EQTTJcS8eB4SFMPeN3qjJ8xoElfsdWruBsK-Mb3wmAninIIGQc7rm_Ng1BDoXeijqipuJtGrpYdCVlg.webp" alt="천혜향 사진" width="500"/>
+          <p>
+            <br />
             한라봉은 톡 튀어나온 꼭지 부분이 한라산을 닮아 한라봉이라고 이름 붙여졌다. 껍질이 두껍고, 레드향 및 천혜향 대비 아삭한 과육과 풍부한 과즙을 가지고 있다는 특징이 있다. 제철은 12월~3월이다. <br />
           </p>
+          <img src="https://t4.ftcdn.net/jpg/05/60/45/61/360_F_560456158_9tOeFKxQN95njuYWaOI0Scamxntbw3Se.jpg" alt="한라봉 사진" />
         </details>
         
         
@@ -50,6 +56,7 @@ function Items() {
           이 당시 감귤 농사가 풍년을 이루어 감귤 가격 폭락을 막기 위해 제주도에서 감귤 농축액 공장을 설립하였고 이곳에 초콜릿을 만드는 민간기업을 유치하였다. <br />
           그 결과 처음 감귤초콜릿이 만들어졌으며 현재는 다양한 회사에서 감귤뿐 아니라 한라봉, 녹차, 백년초 등 다양한 제주도 특산물을 활용하여 초콜릿을 만들고 있다. <br />
           </p>
+          <img src="https://i.namu.wiki/i/xUgsBWQtvQFmSHjH5GGzLIjQ4VGXB5ZZoBZdeuyVSRJ9eVyGKEHnFN5nLk1054qse4JVcrVr60lU1EWO5Cf9oQ.webp" alt="감귤초콜릿 사진" />
         </details>
       </div>
       </>
