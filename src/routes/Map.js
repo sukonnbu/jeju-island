@@ -1,17 +1,54 @@
-import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
+import { useEffect } from 'react';
 const { kakao } = window;
 
 function Map() {
-  const [team, setTeam] = useState(2); // 0: A팀, 1: B팀, 2: C팀
+  useEffect(() => {
+    const container = document.getElementById('map');
+    const options = {
+      center: new kakao.maps.LatLng(33.450701, 126.570667),
+      level: 3
+    };
 
-  const mapContainer = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-  const mapOptions = { //지도를 생성할 때 필요한 기본 옵션
-    center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-    level: 3 //지도의 레벨(확대, 축소 정도)
-  };
+    const map = new kakao.maps.Map(container, options);
+    const geocoder = new kakao.maps.services.Geocoder();
 
-  const map = new kakao.maps.Map(mapContainer, mapOptions); //지도 생성 및 객체 리턴
+    const positions = [
+      {
+        title: "카카오",
+        address: "제주특별자치도 제주시 첨단로 242"
+      }
+    ];
+
+    positions.forEach(function (pos) {
+      geocoder.addressSearch(pos.address, function(result, status) {
+        if (status === kakao.maps.services.Status.OK) {
+          const coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+          const marker = new kakao.maps.Marker({
+            map: map,
+            position: coords,
+            title: pos.title,
+            clickable: true
+          });
+
+          const overlay = new kakao.maps.CustomOverlay({
+            map: map,
+            positoin: coords,
+            content: '무언가' // 개발 중
+          });
+
+          kakao.maps.event.addListener(marker, 'click', function() {
+            overlay.setMap(map);
+          });
+
+          function closeOverlay() {
+            overlay.setMap(null);
+          }
+        }
+      });
+    })
+
+  }, []);
   
   return (
     <>
@@ -21,7 +58,7 @@ function Map() {
       height: "400px"
     }}></div>
     </>
-  )
+  );
 }
 
 export default Map;
