@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/jeju-island/static/js/main.f8a8bd4a.js",
+    "main.js": "/jeju-island/static/js/main.46ae9389.js",
     "static/js/453.de40c225.chunk.js": "/jeju-island/static/js/453.de40c225.chunk.js",
     "index.html": "/jeju-island/index.html",
-    "main.f8a8bd4a.js.map": "/jeju-island/static/js/main.f8a8bd4a.js.map",
+    "main.46ae9389.js.map": "/jeju-island/static/js/main.46ae9389.js.map",
     "453.de40c225.chunk.js.map": "/jeju-island/static/js/453.de40c225.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.f8a8bd4a.js"
+    "static/js/main.46ae9389.js"
   ]
 }
