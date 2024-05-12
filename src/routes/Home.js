@@ -5,7 +5,7 @@ function Home() {
     <>
     <Navbar />
     <div>
-      <h1>홈</h1>
+      <h1>제주도</h1>
     </div>
     </>
   );
