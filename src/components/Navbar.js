@@ -9,7 +9,7 @@ function Navbar() {
         </div>
         <ul className="navbar__menu">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/map">Map</Link></li>
+          <li><Link to="/jejuinfo">JEJU Info</Link></li>
           <li><Link to="/placeinfo">Place Info</Link></li>
           <li><Link to="/items">Items</Link></li>
         </ul>

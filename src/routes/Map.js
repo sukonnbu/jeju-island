@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 const { kakao } = window;
 
 function Map() {
@@ -18,67 +18,67 @@ function Map() {
       {
         title: "제주공항",
         address: "제주특별자치도 제주시 공항로 2",
-        content: "<div></div>"
+        content: ""
       },
       {
         title: "WIND 1947",
         address: "제주특별자치도 서귀포시 토평공단로 78-27",
-        content: "<div></div>"
+        content: ""
       },
       {
         title: "외돌개",
         address: "제주특별자치도 서귀포시 서홍동 791",
-        content: "<div></div>"
+        content: "<div style='width:150px;background-color:#BBDEFB;'><article><h3>외돌개</h3><section><img src='https://api.cdn.visitjeju.net/photomng/imgpath/202110/26/0a11cbe5-04e8-4871-8c2a-e3a874af4190.jpg' /></section></article></div>"
       },
       {
         title: "휴애리 자연휴양림",
         address: "제주특별자치도 서귀포시 남원읍 신례동로 256",
-        content: "<div></div>"
+        content: ""
       },
       {
         title: "중문 제트보트",
         address: "제주특별자치도 서귀포시 중문관광로",
-        content: "<div></div>"
+        content: ""
       },
       {
         title: "제주 라프체험",
         address: "제주특별자치도 제주시 조천읍 선교로 117",
-        content: "<div></div>"
+        content: ""
       },
       {
         title: "제주 레일바이크",
         address: "제주특별자치도 제주시 구좌읍 종달리 4639",
-        content: "<div></div>"
+        content: ""
       },
       {
         title: "표선 민속촌",
         address: "제주특별자치도 서귀포시 표선면 민속해안로 631-34",
-        content: "<div></div>"
+        content: ""
       },
       {
         title: "넥슨 컴퓨터 박물관",
         address: "제주특별자치도 제주시 1100로 3198-8",
-        content: "<div></div>"
+        content: ""
       },
       {
         title: "이호테우 해변",
         address: "제주특별자치도 제주시 도리로 20",
-        content: "<div></div>"
+        content: ""
       },
       {
         title: "용두암",
         address: "제주특별자치도 제주시 용두암길 15",
-        content: "<div></div>"
+        content: ""
       },
       {
         title: "제주 동문시장",
         address: "제주특별자치도 제주시 관덕로 14길 20",
-        content: "<div></div>"
+        content: ""
       },
       {
         title: "표선해비치해변",
         address: "제주특별자치도 서귀포시 표선면 표선리",
-        content: "<div></div>"
+        content: ""
       }
     ];
 
@@ -86,8 +86,7 @@ function Map() {
       geocoder.addressSearch(pos.address, function(result, status) {
         if (status === kakao.maps.services.Status.OK) {
           const coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-          console.log(coords);
-
+          
           const marker = new kakao.maps.Marker({
             map: map,
             position: coords,
@@ -95,24 +94,22 @@ function Map() {
             clickable: true
           });
 
-          const infoWindow = new kakao.maps.InfoWindow({
+          const overlay = new kakao.maps.CustomOverlay({
             position: coords,
             content: pos.content,
-            removable: true
-          });
-
-          const customOverlay = new kakao.maps.CustomOverlay({
-            map: map,
-            position: new kakao.maps.LatLng(33.361427, 126.529417),
-            yAnchor: 0.5,
-            xAnchor: 0.5,
-            zIndex: 1,
             clickable: true,
-            content: "OVERLAY"
+            zIndex: 1,
+            xAnchor: 0.5,
+            yAnchor: 1.1
           });
 
           kakao.maps.event.addListener(marker, 'click', function() {
-            infoWindow.open(map, marker);
+            overlay.setMap(map);
+            if(overlay.getVisible()){
+              overlay.setVisible(false);
+            } else {
+              overlay.setVisible(true);
+            }
           });
         }
       });
@@ -125,7 +122,7 @@ function Map() {
     <Navbar />
     <div id="map" style={{
       width: "500px",
-      height: "400px"
+      height: "500px"
     }}></div>
     </>
   );

@@ -1,13 +1,13 @@
 import Navbar from "../components/Navbar";
 
-function Home() {
+function JejuInfo() {
   return (
     <>
       <Navbar />
-      <div>
+      <article>
         <h1>제주도</h1>
-        <details>
-          <summary>제주도 T.M.I</summary>
+        <article>
+          <h2>제주도 소개</h2>
           <details>
             <summary>삼다도 & 삼무도</summary>
             <p>
@@ -92,82 +92,39 @@ function Home() {
             </p>
             <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAzMjFfMTM0%2FMDAxNjc5MzI3NzkyNDc1.OaSiAyKu2x12izDjAnaqmzBnBRrrN6ZV7ndUBiMMRVUg.05YJtsGsuE3mbZ2J7dQomJvSEiDKGVOGAhuMraa8Pk8g.JPEG.sayloveme12%2FIMG_1318.JPG&type=sc960_832" alt="뉴스에 나온 제주사투리" />
           </details>
-          <br />
-        </details>
-      <details>
-        <summary> 웹정보</summary>
-        <details>
-          <summary>맵</summary>
-          <p>
-            제주도 지도이다.
-          <br />
-          제주도에서 각 팀별로 갈 곳을 알려준다.
-          <br />
-          카카오 맵 기반으로 만들어져 있다.
-          <br />
-
-          <br />
-          </p>  
-        </details>
-
-        <details>
-          <summary>PLACE INFO</summary>
-          <p>
-            말 그대로 장소에 대한 정보이다.
-            <br />
-            방문할 곳과 황승근선생님의 "제주 여행지 60선"으로 나뉘어진다.
-            <br />
-            간단한 설명과 사진이 첨부되어있다
-            <br />
-          </p>
-        </details>
-
-        <details>
-          <summary>ITEMS</summary>
-          <p>
-            제주도에 특산품들에 대해서 담고 있다.
-            <br />
-            제주도 하면 생각나는 특산품들에 기원과 특산품별 세부사항을 담고 있다. 
-            <br />
-          </p>
-          </details>
-
-          <details>
-          <summary>참여자</summary>
-          <p>송요한 선생님
-            <br />
-            황승근 선생님
-            <br />
-            민동훈 선생님
-            <br />
-            20107 민경조
-            <br />
-            20203 김강석
-            <br />
-            20321 유현우
-            <br />
-            20322 이재영
-            <br />
-            20429 최현석
-            <br />
-            20505 김성진
-            <br />
-            20628 최지완
-            <br />
-            20730 최현우
-            <br />
-            20808 김범수
-            <br />
-            20823 정승용
-            <br />
-            20829 탁준호
-            <br />
-          </p>
-          </details>
-        </details>
-      </div>
+        </article>
+      </article>
+      <footer style={{
+        bottom: "0",
+        position: "fixed"
+      }}>
+        <div style={{
+          display: "flex",
+          flexDirection: "row"
+        }}>
+          <span>송요한선생님</span>
+          <span>황승근선생님</span>
+          <span>민동훈선생님</span>
+        </div>
+        <div style={{
+          display: "flex",
+          flexDirection: "row"
+        }}>
+          <span>20107민경조</span>
+          <span>20203김강석</span>
+          <span>20321유현우</span>
+          <span>20322이재영</span>
+          <span>20429최현석</span>
+          <span>20505김성진</span>
+          <span>20628최지완</span>
+          <span>20730최현우</span>
+          <span>20808김범수</span>
+          <span>20823정승용</span>
+          <span>20829탁준호</span>
+        </div>
+      </footer>
     </>
   );
 }
 
-export default Home;
+export default JejuInfo; 
