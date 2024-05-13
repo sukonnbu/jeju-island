@@ -101,6 +101,16 @@ function Map() {
             removable: true
           });
 
+          const customOverlay = new kakao.maps.CustomOverlay({
+            map: map,
+            position: new kakao.maps.LatLng(33.361427, 126.529417),
+            yAnchor: 0.5,
+            xAnchor: 0.5,
+            zIndex: 1,
+            clickable: true,
+            content: "OVERLAY"
+          });
+
           kakao.maps.event.addListener(marker, 'click', function() {
             infoWindow.open(map, marker);
           });
