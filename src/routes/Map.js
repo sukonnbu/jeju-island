@@ -86,6 +86,8 @@ function Map() {
       geocoder.addressSearch(pos.address, function(result, status) {
         if (status === kakao.maps.services.Status.OK) {
           const coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+          console.log(coords);
+
           const marker = new kakao.maps.Marker({
             map: map,
             position: coords,
