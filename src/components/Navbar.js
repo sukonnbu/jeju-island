@@ -4,8 +4,10 @@ function Navbar() {
   return (
     <header className="App-header">
       <nav className="navbar">
-        <div className="navbar__logo">
-          <Link to="/">제주도로 떠나는 여행</Link>
+        <div className="navbar__logo" style={{
+          textAlign: "center",
+        }}>
+          <Link to="/"><h1>제주도로 떠나는 여행</h1></Link>
         </div>
         <ul className="navbar__menu">
           <li><Link to="/">홈</Link></li>

@@ -7,6 +7,13 @@ function JejuInfo() {
       <article>
         <h1>제주도 소개</h1>
         <article>
+          <h2>화산섬 제주도</h2>
+          <p>
+            //
+          </p>
+        </article>
+
+        <article>
           <h2>삼다도 & 삼무도</h2>
           <p>
             바람,여자,돌이 많다는 의미로 삼다도라 불리기도 한다.
@@ -29,23 +36,17 @@ function JejuInfo() {
         </article>
 
         <article>
-        <h2>다른 지역과 다른 제사 음식</h2>
+        <h2>독특한 제사 음식</h2>
           <p>
-            1.빵
+            제주도는 육지와 분리되어 있어 특별한 제사 문화를 보인다. 이는 특히 독특한 제사 음식으로서 나타난다.
             <br />
-            현무암 지대라 쌀을 재배하기 어려워 재배할 수 있는 밀을 사용한 빵이 올라간다고 한다.
-            <br />
-            2.과일
-            <br />
-            귤과 열대과일(바나나, 애플망고, 파인애플등)이 자라기 쉬워 자연스레 올라갔다고 한다.
-            <br />
-            3.옥돔
-            <br />
-            옥돔이라는 생선을 굽거나 탕, 말려서 올렸다고 한다.
-            <br />
-            4.제사상에 올리는 술
-            <br />
-            과거에는 감주를 만들어서 올렸지만, 요즘은 귤 쥬스를 사용하기도 한다.
+            제주도의 특색 있는 제사 음식들은 다음과 같다.
+            <ol>
+              <li><big>빵</big> - 제주도는 현무암 지대이므로 쌀을 재배하기 어려워 재배할 수 있는 밀을 사용한 빵이 올라간다.</li>
+              <li><big>과일</big> - 아열대 기후를 띠는 제주도는 귤과 열대 과일(바나나, 애플망고, 파인애플 등)이 자라기 쉬워 자연스레 제사상에 올라가게 되었다</li>
+              <li><big>옥돔</big> - 옥돔이라는 생선을 굽거나 탕으로 하여, 또는 말려서 올렸다고 한다.</li>
+              <li><big>이색 술</big> - 과거에는 감주를 만들어서 올렸지만, 요즘에는 귤 주스를 사용하기도 한다.</li>
+            </ol>
           </p>
           <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAyMDJfMjE4%2FMDAxNjQzODAxNDM5NzI1.DqD0OlQdciP1Amhnf8evnjQpem6GnbsuINsl9YpQVLQg.z6BthhTzNYG3VekJ_BrPUMRc7THFyNaLJmCiWui_BOIg.JPEG.gonlog%2F20220201%25A3%25DF102549.jpg&type=sc960_832" alt="제사상 이미지" />
         </article>
