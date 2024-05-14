@@ -72,7 +72,7 @@ function PlaceInfo() {
     <>
     <Navbar />
     <div>
-      <h1>관광지 정보</h1>
+      <h1>관광지 소개</h1>
       <select value={index} onChange={function (event) {
         setIndex(event.target.value)
       }} style={{

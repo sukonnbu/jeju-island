@@ -5,16 +5,17 @@ function Navbar() {
     <header className="App-header">
       <nav className="navbar">
         <div className="navbar__logo">
-          <Link to="/">KH JEJU-ISLAND</Link>
+          <Link to="/">제주도로 떠나는 여행</Link>
         </div>
         <ul className="navbar__menu">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/jejuinfo">JEJU Info</Link></li>
-          <li><Link to="/placeinfo">Place Info</Link></li>
-          <li><Link to="/items">Items</Link></li>
+          <li><Link to="/">홈</Link></li>
+          <li><Link to="/jejuinfo">제주도 소개</Link></li>
+          <li><Link to="/placeinfo">관광지 소개</Link></li>
+          <li><Link to="/items">특산물&기념품</Link></li>
+          <li><Link to="/credit">만든 사람들</Link></li>
         </ul>
       </nav>
-      </header>
+    </header>
   )
 }
 
