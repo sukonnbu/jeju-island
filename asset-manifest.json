@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/jeju-island/static/js/main.0866e4a0.js",
+    "main.js": "/jeju-island/static/js/main.ff384ed0.js",
     "static/js/453.ed70b8ae.chunk.js": "/jeju-island/static/js/453.ed70b8ae.chunk.js",
     "static/media/보롬왓.jpg": "/jeju-island/static/media/보롬왓.6598220b3b4cb5258a98.jpg",
     "static/media/서귀포치유의숲.jpg": "/jeju-island/static/media/서귀포치유의숲.a39c11f71fc075e9a4f7.jpg",
@@ -62,10 +62,10 @@
     "static/media/거문오름(UNESCO 세계자연유산).jpg": "/jeju-island/static/media/거문오름(UNESCO 세계자연유산).64c73b7f8fb8d13a19e5.jpg",
     "static/media/이호테우말등대.jpg": "/jeju-island/static/media/이호테우말등대.42eb7c3d2fa6f90a95db.jpg",
     "index.html": "/jeju-island/index.html",
-    "main.0866e4a0.js.map": "/jeju-island/static/js/main.0866e4a0.js.map",
+    "main.ff384ed0.js.map": "/jeju-island/static/js/main.ff384ed0.js.map",
     "453.ed70b8ae.chunk.js.map": "/jeju-island/static/js/453.ed70b8ae.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.0866e4a0.js"
+    "static/js/main.ff384ed0.js"
   ]
 }
