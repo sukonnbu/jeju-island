@@ -1,4 +1,4 @@
-function Place({name, type, description, address}) {
+export default function Place({name, type, description, address}) {
     return (
         <div style={{
             display: 'flex',
@@ -9,15 +9,19 @@ function Place({name, type, description, address}) {
         }}>
             <details>
                 <summary>{name}</summary>
-                <img src={require("../images/"+name+".jpg")} alt={name} />
-                종류: {type}
-                <br /><br />
-                설명: {description}
-                <br /><br />
-                주소: {address}
+                <article>
+                    <img src={require("../images/"+name+".jpg")} alt={name} />
+                    종류: {type}
+                    <section>
+                        <p>
+                            {description}
+                        </p>
+                    </section>
+                    <footer>
+                        주소: {address}
+                    </footer>
+                </article>
             </details>
         </div>
     )
 }
-
-export default Place;

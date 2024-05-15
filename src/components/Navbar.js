@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-function Navbar() {
+export default function Navbar() {
   return (
     <header className="App-header">
       <nav className="navbar">
@@ -20,5 +20,3 @@ function Navbar() {
     </header>
   )
 }
-
-export default Navbar

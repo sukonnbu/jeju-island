@@ -1,18 +1,17 @@
-import Navbar from '../components/Navbar';
 import { useEffect } from 'react';
+import Navbar from '../components/Navbar';
+const kakaoAPI = window.kakao.maps;
 
 function Home() {
   useEffect(() => {
-    const kakaoAPI = window.kakao.maps;
-
     const options = {
-        center: new kakaoAPI.LatLng(33.361427, 126.529417),
-        level: 10
+      center: new kakaoAPI.LatLng(33.361427, 126.529417),
+      level: 10
     }
-
+  
     const container = document.getElementById('map');
     const map = new kakaoAPI.Map(container, options);
-
+  
     const positions = [
       {
         title: "제주공항",
@@ -141,7 +140,7 @@ function Home() {
         content: ""
       }
     ];
-
+  
     positions.forEach(function (pos) {
       const coords = new kakaoAPI.LatLng(pos.coords.Lat, pos.coords.Lng);
       
@@ -151,16 +150,16 @@ function Home() {
         title: pos.title,
         clickable: true
       });
-
+  
       const overlay = new kakaoAPI.CustomOverlay({
         position: coords,
         content: pos.content,
         clickable: true,
-        zIndex: 1,
+        zIndex: 2,
         xAnchor: 0.5,
         yAnchor: 1.1
       });
-
+  
       kakaoAPI.event.addListener(marker, 'click', function() {
         overlay.setMap(map);
         if(overlay.getVisible()){
@@ -169,55 +168,42 @@ function Home() {
           overlay.setVisible(true);
         }
       });
-    })
-
-    /** 
-     * 제주공항:0
-     * WIND1947: 1
-     * 외돌개: 2
-     * 휴애리: 3
-     * 중문보트: 4
-     * 제주라프: 5
-     * 레일바이크: 6
-     * 민속촌: 7
-     * 컴퓨터박물관: 8
-     * 이호테우해변: 9
-     * 용두암: 10
-     * 동문시장: 11
-     * 해비치해변: 12
-     * 제주 알제이: 13
-     * */
-    const ASecondDayPath = [
-      new kakaoAPI.LatLng(positions[12].coords.Lat, positions[12].coords.Lng),
-      new kakaoAPI.LatLng(positions[7].coords.Lat, positions[7].coords.Lng),
-      new kakaoAPI.LatLng(positions[6].coords.Lat, positions[6].coords.Lng),
-      new kakaoAPI.LatLng(positions[5].coords.Lat, positions[5].coords.Lng),
-      new kakaoAPI.LatLng(positions[3].coords.Lat, positions[3].coords.Lng)
-    ]
-    const AThirdDayPath = [
-      new kakaoAPI.LatLng(positions[1].coords.Lat, positions[1].coords.Lng),
-      new kakaoAPI.LatLng(positions[11].coords.Lat, positions[11].coords.Lng),
-      new kakaoAPI.LatLng(positions[8].coords.Lat, positions[8].coords.Lng),
-      new kakaoAPI.LatLng(positions[0].coords.Lat, positions[0].coords.Lng)
-    ];
-
+    });
+  
+    /**
+     * 제주공항: new kakaoAPI.LatLng(33.5059364682672, 126.495951277797),
+     * WIND 1947: new kakaoAPI.LatLng(33.2895183041826, 126.588828203157),
+     * 외돌개: new kakaoAPI.LatLng(33.240076867127, 126.545663944153),
+     * 휴애리 자연휴양림: new kakaoAPI.LatLng(33.3085347525753, 126.634380832055),
+     * 중문 제트보트: new kakaoAPI.LatLng(33.244946442101, 126.418916875895),
+     * 제주 라프체험: new kakaoAPI.LatLng(33.4869065606552, 126.706132319352),
+     * 제주 레일바이크: new kakaoAPI.LatLng(33.4646225230584, 126.836951495623),
+     * 넥슨 컴퓨터 박물관: new kakaoAPI.LatLng(33.4721199545726, 126.485799750022),
+     * 이호테우 해변: new kakaoAPI.LatLng(33.4961965681116, 126.455892860155),
+     * 용두암: new kakaoAPI.LatLng(33.5148035919525, 126.511798046978),
+     * 제주 동문시장: new kakaoAPI.LatLng(33.5115902822492, 126.526018218964),
+     * 표선 민속촌: new kakaoAPI.LatLng(33.3212871409308, 126.843088213207),
+     * 표선해비치해변: new kakaoAPI.LatLng(33.3265291020204, 126.828739926647),
+     * 제주 알제이: new kakaoAPI.LatLng(33.4292988686855, 126.352722700715),
+    */
     const AFirstLine = new kakaoAPI.Polyline({
-      map: map,
       path: [
-        new kakaoAPI.LatLng(positions[0].coords.Lat, positions[0].coords.Lng),
-        new kakaoAPI.LatLng(positions[10].coords.Lat, positions[10].coords.Lng),
-        new kakaoAPI.LatLng(positions[13].coords.Lat, positions[13].coords.Lng),
-        new kakaoAPI.LatLng(positions[4].coords.Lat, positions[4].coords.Lng),
-        new kakaoAPI.LatLng(positions[2].coords.Lat, positions[2].coords.Lng)
+        new kakaoAPI.LatLng(33.5059364682672, 126.495951277797),
+        new kakaoAPI.LatLng(33.5148035919525, 126.511798046978),
+        new kakaoAPI.LatLng(33.4292988686855, 126.352722700715),
+        new kakaoAPI.LatLng(33.244946442101, 126.418916875895),
+        new kakaoAPI.LatLng(33.240076867127, 126.545663944153)
       ],
       strokeWeight: 5,
-      strokeColor: "#FFFAE00",
-      strokeOpacity: 0.7,
+      strokeColor: "#0000FF",
+      strokeOpacity: 0.5,
       strokeStyle: "solid"
     });
-
-  }, []);
   
+    AFirstLine.setMap(map);
+  
+  }, []);
+
   return (
     <>
     <Navbar />

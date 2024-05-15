@@ -1,9 +1,16 @@
 import Navbar from "../components/Navbar"
 import Place from "../components/Place"
+import Checkbox from "../components/Checkbox"
 import { useState } from "react"
 
 function PlaceInfo() {
   const [index, setIndex] = useState(0);
+  const [plant, setPlant] = useState(true);
+  const [terrain, setTerrain] = useState(true);
+  const [sight, setSight] = useState(true);
+  const [ocean, setOcean] = useState(true);
+  const [history, setHistory] = useState(true);
+
   const otherPlaces = [
     {name: "사려니숲길", type:"식생", description: "사려니숲길은 제주의 숨은 비경 31곳 중 하나로, 비자림로를 시작으로 물찻오름과 사려니 오름을 거쳐가는 삼나무가 우거진 숲길이다. 사려니오름까지 이어지는 숲길이기 때문에 사려니숲길이라고 불린다. ‘사려니’는 ‘신성한 숲’ 혹은 ‘실 따위를 흩어지지 않게 동그랗게 포개어 감다’라는 뜻으로 숲길을 거닐면 상쾌한 삼나무 향에 포개진 듯한 느낌을 받을 수 있다. 빽빽한 삼나무뿐만 아니라 졸참나무, 서어나무, 때죽나무, 편백나무 등 다양한 수종이 서식하고 있다. 다양한 수종이 서식하기 때문에 오소리와 제주족제비를 비롯한 포유류, 팔색조와 참매를 비롯한 조류, 쇠살모사를 비롯한 파충류 등의 보금자리가 되기도 한다.", address: "제주특별자치도 제주시 조천읍 교래리 산 137-1"},
     {name: "우도(해양도립공원)", type:"지형", description: "산호해변(서빈백사)모래가 아닌 바다 어딘가서 자라고 있는 산호(홍조단괴)가 풍화되어 백사장이 있는 곳으로, 하우도항에서 해변가를 따라 이동하다 보면 도착할 수 있다. 홍조단괴란 홍조류가 탄산칼슘을 축적하여 돌처럼 단단하게 굳어져 버린 상태를 말하며, 홍조단괴로 이뤄진 해변은 세계에서도 몇곳 없어 학술적으로도 희소가치를 지닌다. 문화재청에서 천연기념물 제438호로 지정해 보호하고 있다.검멀레 해변산호해변이 백사장이라면 이쪽은 흑사장. 화산암이 풍화되어 생긴 검은 모래사장이다. 거대한 해식 절벽이 옆에 있으며, 썰물 때에는 해식동굴[15]을 볼 수도 있다. 여름철에는 바다에서 모터보트를 타고 절벽과 동굴을 보다 가까이서 볼 수 있다. 해변가에 해녀들이 사용하는 갯배가 있어 기상상태가 좋다면 물질하는 곳에서 해변가로 이동이 가능하다. ", address: "제주특별자치도 제주시 우도면 삼양고수물길 1"},
@@ -64,9 +71,7 @@ function PlaceInfo() {
     {name: "송악산", type:"지형", description: "산방산의 남쪽, 가파도가 손에 잡힐 듯 보이는 바닷가에 불끈 솟은 산이 송악산이다. 99개의 작은 봉우리가 모여있어 일명 99봉이라고도 한다. 세계적으로 유례가 드문 이중 분화구-1차 폭발로 형성된 제 1분화구 안에 2차 폭발이 일어나 2개의 분화구가 존재-의 화산지형이기도 하다.", address: "제주특별자치도 서귀포시 대정읍 송악관광로 421-1"},
     {name: "중문관광단지", type:"관광", description: "중문관광단지는 서귀포시 중문동, 색달동, 대포동에 걸쳐 있는 종합관광휴양지이다. 제주만이 가지고 있는 독특한 자연 경관과 지리적 환경을 활용한 관광단지로 1978년부터 조성하였다. 내부는 10개의 숙박 시설과 9개의 휴양 시설로 이루어져, 국내외 관광객을 위한 기본적인 숙박과 함께 관광, 즐길 거리, 레저 시설 등을 제공하며, 인근에 국제 회의를 위한 컨벤션, 쇼핑시설, 운동·오락, 휴양·문화 시설 등도 두루 갖추고 있다.", address: "제주특별자치도 서귀포시 중문관광로72번길 35"},
     {name: "제주4.3평화공원", type:"역사", description: "제주시 봉개동에 위치한 제주 4.3 평화공원은 4.3 사건 당시의 희생자들을 기리기 위한 공간이다. 공원 안에는 제주 4.3 평화기념관, 위령제단, 위령탑, 봉안관 등이 이곳을 지키고 있다. 위령제단은 연중 4.3 희생자에 대해 참배를 진행하는 곳이며, 그들을 모시고 있는 위패봉안실이 따로 마련되어있다. 봉안관은 4.3유해발굴 사업 시기에 발굴된 유해를 봉안하는 장소로 현재 380기가 안치되어 있다. 각 명비원에는 희생자의 성명과 성별, 당시 연령 등을 기록해 두었다.", address: "제주특별자치도 제주시 명림로 430"}
-];
-
-
+  ];
 
   return (
     <>
@@ -81,18 +86,42 @@ function PlaceInfo() {
         <option value="0">방문</option>
         <option value="1">제주 관광지 60선</option>
       </select>
-      {index === "0" ? <>
-        {/** 방문할 장소 보여주기 */}
-      </> : null}
-      {index === "1" ? <>
+      {index === "0" && <>
+          {/** 방문할 장소 보여주기 */}
+        </>
+      }
+      {index === "1" &&
+        <>
+        <fieldset style={{
+          display: "flex",
+          justifyContent: "space-evenly"
+        }}>
+          <legend>나타낼 항목을 선택하세요</legend>
+          <Checkbox checked={plant} onChange={setPlant}>식생</Checkbox>
+          <Checkbox checked={sight} onChange={setSight}>관광</Checkbox>
+          <Checkbox checked={terrain} onChange={setTerrain}>지형</Checkbox>
+          <Checkbox checked={ocean} onChange={setOcean}>해안</Checkbox>
+          <Checkbox checked={history} onChange={setHistory}>역사</Checkbox>
+        </fieldset>
+
         {/** 제주도 관광지 60선 보여주기 */}
-        {otherPlaces.map((place, index) => {
-          return (
-              <Place name={place.name} type={place.type} description={place.description} address={place.address} />
-            );
+        {
+          otherPlaces.map((place, index) => {
+            if (
+              (place.type === "식생" && plant) ||
+              (place.type === "지형" && terrain) ||
+              (place.type === "해안" && ocean) ||
+              (place.type === "관광" && sight) ||
+              (place.type === "역사" && history)
+            ){
+              return (
+                <Place name={place.name} type={place.type} description={place.description} address={place.address} />
+              );
+            }
           })
         }
-      </> : null}
+        </>
+      }
     </div>
     </>
   )
