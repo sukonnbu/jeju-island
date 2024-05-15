@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar"
 import Place from "../components/Place"
+import OtherPlace from "../components/OtherPlace"
 import Checkbox from "../components/Checkbox"
 import { useState } from "react"
 
@@ -77,33 +78,33 @@ function PlaceInfo() {
     <>
     <Navbar />
     <div>
-      <h1>관광지 소개</h1>
-      <select value={index} onChange={function (event) {
-        setIndex(event.target.value)
-      }} style={{
-        marginBottom: "20px"
-      }}>
-        <option value="0">방문</option>
-        <option value="1">제주 관광지 60선</option>
-      </select>
+      <h1 className="text-3xl text-center p-5">관광지 소개</h1>
+      <div className="flex justify-center">
+        <select value={index} onChange={function (event) {
+          setIndex(event.target.value)
+        }} className="border-2">
+          <option value="0">방문</option>
+          <option value="1">제주 관광지 60선</option>
+        </select>
+      </div>
       {index === "0" && <>
           {/** 방문할 장소 보여주기 */}
+          <Place />
         </>
       }
       {index === "1" &&
         <>
-        <fieldset style={{
-          display: "flex",
-          justifyContent: "space-evenly"
-        }}>
-          <legend>나타낼 항목을 선택하세요</legend>
-          <Checkbox checked={plant} onChange={setPlant}>식생</Checkbox>
-          <Checkbox checked={sight} onChange={setSight}>관광</Checkbox>
-          <Checkbox checked={terrain} onChange={setTerrain}>지형</Checkbox>
-          <Checkbox checked={ocean} onChange={setOcean}>해안</Checkbox>
-          <Checkbox checked={history} onChange={setHistory}>역사</Checkbox>
-        </fieldset>
-
+        <div className="flex justify-center p-5">
+          <fieldset className="grid grid-cols-5 justify-items-center content-center border-4 border-black w-96 h-20">
+            <legend className="text-lg text-center px-3">나타낼 항목을 선택하세요</legend>
+            <Checkbox checked={plant} onChange={setPlant}>식생</Checkbox>
+            <Checkbox checked={sight} onChange={setSight}>관광</Checkbox>
+            <Checkbox checked={terrain} onChange={setTerrain}>지형</Checkbox>
+            <Checkbox checked={ocean} onChange={setOcean}>해안</Checkbox>
+            <Checkbox checked={history} onChange={setHistory}>역사</Checkbox>
+          </fieldset>
+        </div>
+        <div className="grid grid-cols-1 justify-items-center">
         {/** 제주도 관광지 60선 보여주기 */}
         {
           otherPlaces.map((place, index) => {
@@ -115,11 +116,12 @@ function PlaceInfo() {
               (place.type === "역사" && history)
             ){
               return (
-                <Place name={place.name} type={place.type} description={place.description} address={place.address} />
+                <OtherPlace name={place.name} type={place.type} description={place.description} address={place.address} />
               );
             }
           })
         }
+        </div>
         </>
       }
     </div>

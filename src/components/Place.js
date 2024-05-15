@@ -1,27 +1,9 @@
-export default function Place({name, type, description, address}) {
+export default function Place() {
     return (
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            width: '100%',
-            padding: '16px'
-        }}>
-            <details>
-                <summary>{name}</summary>
-                <article>
-                    <img src={require("../images/"+name+".jpg")} alt={name} />
-                    종류: {type}
-                    <section>
-                        <p>
-                            {description}
-                        </p>
-                    </section>
-                    <footer>
-                        주소: {address}
-                    </footer>
-                </article>
-            </details>
-        </div>
+        <>
+        <div>내용</div>
+        - 장소 이름/ 사진/ 소개/ 팀별 방문 일자/ 주소
+        하나만 예시로 들어서 젛어놓으면 반복문에 연결 해놓을게
+        </>
     )
 }

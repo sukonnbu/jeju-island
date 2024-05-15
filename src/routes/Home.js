@@ -138,6 +138,33 @@ function Home() {
           Lat: 33.4292988686855
         },
         content: ""
+      },
+      {
+        title: "신신호텔 제주오션",
+        address: "제주특별자치도 서귀포시 중앙로 14",
+        coords: {
+          Lng: 126.562336279883,
+          Lat: 33.2459572185083
+        },
+        content: ""
+      },
+      {
+        title: "스위트메이호텔 서귀포",
+        address: "제주특별자치도 서귀포시 김정문화로27번길 9-1",
+        coords: {
+          Lng: 126.507548268061,
+          Lat: 33.2524815629392
+        },
+        content: ""
+      },
+      {
+        title: "더퍼스트70호텔",
+        address: "제주특별자치도 서귀포시 명동로 46",
+        coords: {
+          Lng: 126.566847661689,
+          Lat: 33.2472529671466
+        },
+        content: ""
       }
     ];
   
@@ -207,10 +234,9 @@ function Home() {
   return (
     <>
     <Navbar />
-    <div id="map" style={{
-      width: "400px",
-      height: "400px"
-    }}></div>
+    <div className="grid grid-cols-1 justify-items-center content-center">
+      <div id="map" className="m-2 w-96 h-96 border-2"></div>
+    </div>
     </>
   );
 }
