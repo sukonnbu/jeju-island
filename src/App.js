@@ -3,7 +3,7 @@ import {Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './routes/Home';
 import JejuInfo from './routes/JejuInfo';
 import PlaceInfo from './routes/PlaceInfo';
-import Items from './routes/Items';
+import ItemInfo from './routes/ItemInfo';
 import Credit from './routes/Credit';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/jejuinfo" element={<JejuInfo />} />
         <Route path="/placeinfo" element={<PlaceInfo />} />
-        <Route path="/items" element={<Items />} />
+        <Route path="/iteminfo" element={<ItemInfo />} />
         <Route path="/credit" element={<Credit />} />
       </Routes>
     </BrowserRouter>

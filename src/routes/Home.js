@@ -1,202 +1,200 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 const kakaoAPI = window.kakao.maps;
 
 function Home() {
+  const [team, setTeam] = useState(1); // 1: A, 2: B, 3: C
+
   useEffect(() => {
     const options = {
       center: new kakaoAPI.LatLng(33.361427, 126.529417),
-      level: 10
+      level: 11
     }
-  
+
     const container = document.getElementById('map');
     const map = new kakaoAPI.Map(container, options);
-  
+
     const positions = [
       {
         title: "제주공항",
-        address: "제주특별자치도 제주시 공항로 2",
         coords: {
-          Lng: 126.495951277797,
-          Lat: 33.5059364682672
+          Lat: 33.5059364682672,
+          Lng: 126.495951277797
         },
         content: ""
       },
       {
-        title: "WIND 1947",
-        address: "제주특별자치도 서귀포시 토평공단로 78-27",
+        title: "WIND1947",
         coords: {
-          Lng: 126.588828203157,
-          Lat: 33.2895183041826
+          Lat: 33.2895183041826,
+          Lng: 126.588828203157
         },
         content: ""
       },
       {
         title: "외돌개",
-        address: "제주특별자치도 서귀포시 서홍동 791",
         coords: {
-          Lng: 126.545663944153,
-          Lat: 33.240076867127
+          Lat: 33.240076867127,
+          Lng: 126.54566394415,
         },
         content: "<div style='width:150px;background-color:#BBDEFB;'><article><h3>외돌개</h3><section><img src='https://api.cdn.visitjeju.net/photomng/imgpath/202110/26/0a11cbe5-04e8-4871-8c2a-e3a874af4190.jpg' /></section></article></div>"
       },
       {
-        title: "휴애리 자연휴양림",
-        address: "제주특별자치도 서귀포시 남원읍 신례동로 256",
+        title: "휴애리자연휴양림",
         coords: {
-          Lng: 126.634380832055,
-          Lat: 33.3085347525753
+          Lat: 33.3085347525753,
+          Lng: 126.634380832055
         },
         content: ""
       },
       {
-        title: "중문 제트보트",
-        address: "제주특별자치도 서귀포시 중문관광로",
+        title: "중문제트보트",
         coords: {
-          Lng: 126.418916875895,
-          Lat: 33.244946442101
+          Lat: 33.244946442101,
+          Lng: 126.41891687589,
         },
         content: ""
       },
       {
-        title: "제주 라프체험",
-        address: "제주특별자치도 제주시 조천읍 선교로 117",
+        title: "제주라프체험",
         coords: {
-          Lng: 126.706132319352,
-          Lat: 33.4869065606552
+          Lat: 33.4869065606552,
+          Lng: 126.706132319352
         },
         content: ""
       },
       {
-        title: "제주 레일바이크",
-        address: "제주특별자치도 제주시 구좌읍 종달리 4639",
+        title: "제주레일바이크",
         coords: {
-          Lng: 126.836951495623,
-          Lat: 33.4646225230584
+          Lat: 33.4646225230584,
+          Lng: 126.836951495623
         },
         content: ""
       },
       {
-        title: "표선 민속촌",
-        address: "제주특별자치도 서귀포시 표선면 민속해안로 631-34",
+        title: "표선민속촌",
         coords: {
-          Lng: 126.843088213207,
-          Lat: 33.3212871409308
+          Lat: 33.3212871409308,
+          Lng: 126.843088213207
         },
         content: ""
       },
       {
-        title: "넥슨 컴퓨터 박물관",
-        address: "제주특별자치도 제주시 1100로 3198-8",
+        title: "넥슨컴퓨터박물관",
         coords: {
-          Lng: 126.485799750022,
-          Lat: 33.4721199545726
+          Lat: 33.4721199545726,
+          Lng: 126.485799750022
         },
         content: ""
       },
       {
-        title: "이호테우 해변",
-        address: "제주특별자치도 제주시 도리로 20",
+        title: "이호테우해변",
         coords: {
-          Lng: 126.455892860155,
-          Lat: 33.4961965681116
+          Lat: 33.4961965681116,
+          Lng: 126.455892860155
         },
         content: ""
       },
       {
         title: "용두암",
-        address: "제주특별자치도 제주시 용두암길 15",
         coords: {
-          Lng: 126.511798046978,
-          Lat: 33.5148035919525
+          Lat: 33.5148035919525,
+          Lng: 126.511798046978
         },
         content: ""
       },
       {
-        title: "제주 동문시장",
-        address: "제주특별자치도 제주시 관덕로 14길 20",
+        title: "제주동문시장",
         coords: {
-          Lng: 126.526018218964,
-          Lat: 33.5115902822492
+          Lat: 33.5115902822492,
+          Lng: 126.526018218964
         },
         content: ""
       },
       {
         title: "표선해비치해변",
-        address: "제주특별자치도 서귀포시 표선면 표선리",
         coords: {
-          Lng: 126.828739926647,
-          Lat: 33.3265291020204
+          Lat: 33.3265291020204,
+          Lng: 126.828739926647
         },
         content: ""
       },
       {
-        title: "제주 알제이",
-        address: "제주특별자치도 제주시 애원로 515",
+        title: "제주알제이",
         coords: {
-          Lng: 126.352722700715,
-          Lat: 33.4292988686855
+          Lat: 33.4292988686855,
+          Lng: 126.352722700715
         },
         content: ""
       },
       {
-        title: "신신호텔 제주오션",
-        address: "제주특별자치도 서귀포시 중앙로 14",
+        title: "신신호텔제주오션",
         coords: {
-          Lng: 126.562336279883,
-          Lat: 33.2459572185083
+          Lat: 33.2459572185083,
+          Lng: 126.562336279883
         },
         content: ""
       },
       {
-        title: "스위트메이호텔 서귀포",
-        address: "제주특별자치도 서귀포시 김정문화로27번길 9-1",
+        title: "스위트메이호텔서귀포",
         coords: {
-          Lng: 126.507548268061,
-          Lat: 33.2524815629392
+          Lat: 33.2524815629392,
+          Lng: 126.507548268061
         },
         content: ""
       },
       {
         title: "더퍼스트70호텔",
-        address: "제주특별자치도 서귀포시 명동로 46",
         coords: {
-          Lng: 126.566847661689,
-          Lat: 33.2472529671466
+          Lat: 33.2472529671466,
+          Lng: 126.566847661689
         },
         content: ""
       }
     ];
-  
+
     positions.forEach(function (pos) {
-      const coords = new kakaoAPI.LatLng(pos.coords.Lat, pos.coords.Lng);
-      
-      const marker = new kakaoAPI.Marker({
-        map: map,
-        position: coords,
-        title: pos.title,
-        clickable: true
-      });
-  
-      const overlay = new kakaoAPI.CustomOverlay({
-        position: coords,
-        content: pos.content,
-        clickable: true,
-        zIndex: 2,
-        xAnchor: 0.5,
-        yAnchor: 1.1
-      });
-  
-      kakaoAPI.event.addListener(marker, 'click', function() {
-        overlay.setMap(map);
-        if(overlay.getVisible()){
-          overlay.setVisible(false);
-        } else {
-          overlay.setVisible(true);
-        }
-      });
+      if (
+        ((pos.title === "스위트메이호텔서귀포" || 
+        pos.title === "더퍼스트70호텔" ||
+        pos.title === "이호테우해변") && team==="1") ||
+        ((pos.title === "표선해비치해변" ||
+          pos.title === "신신호텔제주오션" ||
+          pos.title === "더퍼스트70호텔") && team==="2") ||
+        ((pos.title === "표선해비치해변" ||
+          pos.title === "신신호텔제주오션" ||
+          pos.title === "스위트메이호텔서귀포") && team === "3")
+      ) {
+      } else {
+        const coords = new kakaoAPI.LatLng(pos.coords.Lat, pos.coords.Lng);
+        
+        const marker = new kakaoAPI.Marker({
+          map: map,
+          position: coords,
+          title: pos.title,
+          clickable: true
+        });
+
+        const overlay = new kakaoAPI.CustomOverlay({
+          position: coords,
+          content: pos.content,
+          clickable: true,
+          zIndex: 2,
+          xAnchor: 0.5,
+          yAnchor: 1.1
+        });
+
+        kakaoAPI.event.addListener(marker, 'click', function() {
+          overlay.setMap(map);
+          if(overlay.getVisible()){
+            overlay.setVisible(false);
+          } else {
+            overlay.setVisible(true);
+          }
+        });
+      }
     });
-  
+
     /**
      * 제주공항: new kakaoAPI.LatLng(33.5059364682672, 126.495951277797),
      * WIND 1947: new kakaoAPI.LatLng(33.2895183041826, 126.588828203157),
@@ -212,28 +210,206 @@ function Home() {
      * 표선 민속촌: new kakaoAPI.LatLng(33.3212871409308, 126.843088213207),
      * 표선해비치해변: new kakaoAPI.LatLng(33.3265291020204, 126.828739926647),
      * 제주 알제이: new kakaoAPI.LatLng(33.4292988686855, 126.352722700715),
+     * 신신호텔: new kakaoAPI.LatLng(33.2459572185083, 126.562336279883),
+     * 스위트메이: new kakaoAPI.LatLng(33.2524815629392, 126.507548268061),
+     * 더퍼스트70: new kakaoAPI.LatLng(33.2472529671466, 126.566847661689)
     */
+    const weight = 5;
+    const firstColor = "#0000FF";
+    const secondColor = "#00FF00";
+    const thirdColor = "#FF0000";
+    const opacity = 0.5;
+
     const AFirstLine = new kakaoAPI.Polyline({
       path: [
         new kakaoAPI.LatLng(33.5059364682672, 126.495951277797),
         new kakaoAPI.LatLng(33.5148035919525, 126.511798046978),
         new kakaoAPI.LatLng(33.4292988686855, 126.352722700715),
         new kakaoAPI.LatLng(33.244946442101, 126.418916875895),
-        new kakaoAPI.LatLng(33.240076867127, 126.545663944153)
+        new kakaoAPI.LatLng(33.240076867127, 126.545663944153),
+        new kakaoAPI.LatLng(33.2459572185083, 126.562336279883)
       ],
-      strokeWeight: 5,
-      strokeColor: "#0000FF",
-      strokeOpacity: 0.5,
-      strokeStyle: "solid"
+      strokeWeight: weight,
+      strokeColor: firstColor,
+      strokeOpacity: opacity,
+      strokeStyle: "solid",
+      endArrow: true
     });
-  
-    AFirstLine.setMap(map);
-  
-  }, []);
+    const ASecondLine = new kakaoAPI.Polyline({
+      path: [
+        new kakaoAPI.LatLng(33.2459572185083, 126.562336279883),
+        new kakaoAPI.LatLng(33.3265291020204, 126.828739926647),
+        new kakaoAPI.LatLng(33.3212871409308, 126.843088213207),
+        new kakaoAPI.LatLng(33.4646225230584, 126.836951495623),
+        new kakaoAPI.LatLng(33.4869065606552, 126.706132319352),
+        new kakaoAPI.LatLng(33.3085347525753, 126.634380832055),
+        new kakaoAPI.LatLng(33.2459572185083, 126.562336279883)
+      ],
+      strokeWeight: weight,
+      strokeColor: secondColor,
+      strokeOpacity: opacity,
+      strokeStyle: "solid",
+      endArrow: true
+    });
+    const AThirdLine = new kakaoAPI.Polyline({
+      path: [
+        new kakaoAPI.LatLng(33.2459572185083, 126.562336279883),
+        new kakaoAPI.LatLng(33.2895183041826, 126.588828203157),
+        new kakaoAPI.LatLng(33.5115902822492, 126.526018218964),
+        new kakaoAPI.LatLng(33.4721199545726, 126.485799750022),
+        new kakaoAPI.LatLng(33.5059364682672, 126.495951277797)
+      ],
+      strokeWeight: weight,
+      strokeColor: thirdColor,
+      strokeOpacity: opacity,
+      strokeStyle: "solid",
+      endArrow: true
+    });
+
+    const BFirstLine = new kakaoAPI.Polyline({
+      path: [
+        new kakaoAPI.LatLng(33.5059364682672, 126.495951277797),
+        new kakaoAPI.LatLng(33.5148035919525, 126.511798046978),
+        new kakaoAPI.LatLng(33.5115902822492, 126.526018218964),
+        new kakaoAPI.LatLng(33.4869065606552, 126.706132319352),
+        new kakaoAPI.LatLng(33.3085347525753, 126.634380832055),
+        new kakaoAPI.LatLng(33.2524815629392, 126.507548268061)
+      ],
+      strokeWeight: weight,
+      strokeColor: firstColor,
+      strokeOpacity: opacity,
+      strokeStyle: "solid",
+      endArrow: true
+    });
+    const BSecondLine = new kakaoAPI.Polyline({
+      path: [
+        new kakaoAPI.LatLng(33.2524815629392, 126.507548268061),
+        new kakaoAPI.LatLng(33.244946442101, 126.418916875895),
+        new kakaoAPI.LatLng(33.4646225230584, 126.836951495623),
+        new kakaoAPI.LatLng(33.3212871409308, 126.843088213207),
+        new kakaoAPI.LatLng(33.2895183041826, 126.588828203157),
+        new kakaoAPI.LatLng(33.2524815629392, 126.507548268061)
+      ],
+      strokeWeight: weight,
+      strokeColor: secondColor,
+      strokeOpacity: opacity,
+      strokeStyle: "solid",
+      endArrow: true
+    });
+    const BThirdLine = new kakaoAPI.Polyline({
+      path: [
+        new kakaoAPI.LatLng(33.2524815629392, 126.507548268061),
+        new kakaoAPI.LatLng(33.240076867127, 126.545663944153),
+        new kakaoAPI.LatLng(33.4292988686855, 126.352722700715),
+        new kakaoAPI.LatLng(33.4961965681116, 126.455892860155),
+        new kakaoAPI.LatLng(33.4721199545726, 126.485799750022),
+        new kakaoAPI.LatLng(33.5059364682672, 126.495951277797)
+      ],
+      strokeWeight: weight,
+      strokeColor: thirdColor,
+      strokeOpacity: opacity,
+      strokeStyle: "solid",
+      endArrow: true
+    });
+
+    const CFirstLine = new kakaoAPI.Polyline({
+      path: [
+        new kakaoAPI.LatLng(33.5059364682672, 126.495951277797),
+        new kakaoAPI.LatLng(33.4961965681116, 126.455892860155),
+        new kakaoAPI.LatLng(33.5148035919525, 126.511798046978),
+        new kakaoAPI.LatLng(33.2895183041826, 126.588828203157),
+        new kakaoAPI.LatLng(33.240076867127, 126.545663944153),
+        new kakaoAPI.LatLng(33.2472529671466, 126.566847661689)
+      ],
+      strokeWeight: weight,
+      strokeColor: firstColor,
+      strokeOpacity: opacity,
+      strokeStyle: "solid",
+      endArrow: true
+    });
+    const CSecondLine = new kakaoAPI.Polyline({
+      path:[
+        new kakaoAPI.LatLng(33.2472529671466, 126.566847661689),
+        new kakaoAPI.LatLng(33.4869065606552, 126.706132319352),
+        new kakaoAPI.LatLng(33.4646225230584, 126.836951495623),
+        new kakaoAPI.LatLng(33.3212871409308, 126.843088213207),
+        new kakaoAPI.LatLng(33.3085347525753, 126.634380832055),
+        new kakaoAPI.LatLng(33.2472529671466, 126.566847661689)
+      ],
+      strokeWeight: weight,
+      strokeColor: secondColor,
+      strokeOpacity: opacity,
+      strokeStyle: "solid",
+      endArrow: true
+    });
+    const CThirdLine = new kakaoAPI.Polyline({
+      path: [
+        new kakaoAPI.LatLng(33.2472529671466, 126.566847661689),
+        new kakaoAPI.LatLng(33.244946442101, 126.418916875895),
+        new kakaoAPI.LatLng(33.5115902822492, 126.526018218964),
+        new kakaoAPI.LatLng(33.4292988686855, 126.352722700715),
+        new kakaoAPI.LatLng(33.4721199545726, 126.485799750022),
+        new kakaoAPI.LatLng(33.5059364682672, 126.495951277797)
+      ],
+      strokeWeight: weight,
+      strokeColor: thirdColor,
+      strokeOpacity: opacity,
+      strokeStyle: "solid",
+      endArrow: true
+    });
+
+    switch(team) {
+      case "1":
+        AFirstLine.setMap(map);
+        ASecondLine.setMap(map);
+        AThirdLine.setMap(map);
+
+        BFirstLine.setMap(null);
+        BSecondLine.setMap(null);
+        BThirdLine.setMap(null);
+        CFirstLine.setMap(null);
+        CSecondLine.setMap(null);
+        CThirdLine.setMap(null);
+        break;
+      case "2":
+        BFirstLine.setMap(map);
+        BSecondLine.setMap(map);
+        BThirdLine.setMap(map);
+
+        AFirstLine.setMap(null);
+        ASecondLine.setMap(null);
+        AThirdLine.setMap(null);
+        CFirstLine.setMap(null);
+        CSecondLine.setMap(null);
+        CThirdLine.setMap(null);
+        break;
+      case "3":
+        CFirstLine.setMap(map);
+        CSecondLine.setMap(map);
+        CThirdLine.setMap(map);
+
+        BFirstLine.setMap(null);
+        BSecondLine.setMap(null);
+        BThirdLine.setMap(null);
+        AFirstLine.setMap(null);
+        ASecondLine.setMap(null);
+        AThirdLine.setMap(null);
+        break;
+    }
+  }, [team]);
 
   return (
     <>
     <Navbar />
+    <div className="flex justify-center">
+      <select value={team} onChange={function (event) {
+        setTeam(event.target.value)
+      }} className="border-2">
+        <option value="1">A팀</option>
+        <option value="2">B팀</option>
+        <option value="3">C팀</option>
+      </select>
+    </div>
     <div className="grid grid-cols-1 justify-items-center content-center">
       <div id="map" className="m-2 w-96 h-96 border-2"></div>
     </div>

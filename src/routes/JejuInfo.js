@@ -5,16 +5,16 @@ function JejuInfo() {
     <>
     <Navbar />
     <article id="top">
-      <h1>제주도 소개</h1>
-      <details>
-        <summary>목차</summary>
-        <ul>
-          <li><a href="#화산섬">화산섬</a></li>
-          <li><a href="#삼다삼무도">삼다도&삼무도</a></li>
-          <li><a href="#제사음식">제사 음식</a></li>
-          <li><a href="#요괴">제주도 요괴</a></li>
-          <li><a href="#돌하르방">돌하르방</a></li>
-          <li><a href="#사투리">사투리</a></li>
+      <h1 className="text-3xl text-center p-5">제주도 소개</h1>
+      <details className="border-2 m-3 p-2">
+        <summary className="text-xl text-center">목차</summary>
+        <ul className="grid grid-cols-3 justify-items-center content-center pt-3">
+          <li className="text-lg"><a href="#화산섬">화산섬</a></li>
+          <li className="text-lg"><a href="#삼다삼무도">삼다도&삼무도</a></li>
+          <li className="text-lg"><a href="#제사음식">제사 음식</a></li>
+          <li className="text-lg"><a href="#요괴">제주도 요괴</a></li>
+          <li className="text-lg"><a href="#돌하르방">돌하르방</a></li>
+          <li className="text-lg"><a href="#사투리">사투리</a></li>
         </ul>
       </details>
       
