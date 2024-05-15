@@ -4,7 +4,7 @@ export default function Item({children, title, image, id}) {
             <h2 className="text-2xl">{title}</h2>
             {image!=undefined && <img src={image} alt={title} />
             }
-            <p>{children}</p>
+            {children}
         </article>
     )
 }

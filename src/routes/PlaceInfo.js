@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar"
 import Place from "../components/Place"
 import OtherPlace from "../components/OtherPlace"
 import Checkbox from "../components/Checkbox"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function PlaceInfo() {
   const [index, setIndex] = useState(0);
@@ -162,6 +162,10 @@ function PlaceInfo() {
     {name: "제주4.3평화공원", type:"역사", description: "제주시 봉개동에 위치한 제주 4.3 평화공원은 4.3 사건 당시의 희생자들을 기리기 위한 공간이다. 공원 안에는 제주 4.3 평화기념관, 위령제단, 위령탑, 봉안관 등이 이곳을 지키고 있다. 위령제단은 연중 4.3 희생자에 대해 참배를 진행하는 곳이며, 그들을 모시고 있는 위패봉안실이 따로 마련되어있다. 봉안관은 4.3유해발굴 사업 시기에 발굴된 유해를 봉안하는 장소로 현재 380기가 안치되어 있다. 각 명비원에는 희생자의 성명과 성별, 당시 연령 등을 기록해 두었다.", address: "제주특별자치도 제주시 명림로 430"}
   ];
 
+  useEffect(() => {
+    setIndex(0);
+  }, [])
+
   return (
     <>
     <Navbar />
@@ -192,7 +196,7 @@ function PlaceInfo() {
             <Checkbox checked={history} onChange={setHistory}>역사</Checkbox>
           </fieldset>
         </div>
-        <div className="grid grid-cols-1 justify-items-center">
+        <div className="grid grid-cols-1 justify-items-center space-y-5">
         {/** 제주도 관광지 60선 보여주기 */}
         {
           otherPlaces.map((place, index) => {

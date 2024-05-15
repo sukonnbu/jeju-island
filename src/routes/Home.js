@@ -221,6 +221,7 @@ function Home() {
     const opacity = 0.5;
 
     const AFirstLine = new kakaoAPI.Polyline({
+      map: map,
       path: [
         new kakaoAPI.LatLng(33.5059364682672, 126.495951277797),
         new kakaoAPI.LatLng(33.5148035919525, 126.511798046978),
@@ -236,6 +237,7 @@ function Home() {
       endArrow: true
     });
     const ASecondLine = new kakaoAPI.Polyline({
+      map: map,
       path: [
         new kakaoAPI.LatLng(33.2459572185083, 126.562336279883),
         new kakaoAPI.LatLng(33.3265291020204, 126.828739926647),
@@ -252,6 +254,7 @@ function Home() {
       endArrow: true
     });
     const AThirdLine = new kakaoAPI.Polyline({
+      map: map,
       path: [
         new kakaoAPI.LatLng(33.2459572185083, 126.562336279883),
         new kakaoAPI.LatLng(33.2895183041826, 126.588828203157),
