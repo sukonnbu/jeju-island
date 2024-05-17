@@ -1,9 +1,17 @@
-export default function Place() {
+export default function Place({name, content, address}) {
     return (
         <>
-        <div>내용</div>
-        - 장소 이름/ 사진/ 소개/ 팀별 방문 일자/ 주소
-        하나만 예시로 들어서 젛어놓으면 반복문에 연결 해놓을게
+         <div className="w-96 justify-center" id={name}>
+                <h2 className="text-xl">{name}</h2>
+                <article>
+                    <section>
+                        <p className="text-base font-sans">{content}</p>
+                    </section>
+                    <footer className="flex flex-col justify-between py-1">
+                        <span className="px-2 text-sm">주소: {address}</span>
+                    </footer>
+                </article>
+        </div>
         </>
     )
 }

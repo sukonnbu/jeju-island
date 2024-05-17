@@ -5,7 +5,7 @@ function ItemInfo() {
   return (
     <>
     <Navbar />
-    <div className="flex flex-col">
+    <div className="flex flex-col font-NanumGothic">
       <h1 className="text-3xl p-5 text-center">특산물 & 기념품</h1>
       <details className="border-2 m-3 p-2">
         <summary className="text-xl text-center">목차</summary>

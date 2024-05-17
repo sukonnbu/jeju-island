@@ -5,7 +5,7 @@ function JejuInfo() {
   return (
     <>
     <Navbar />
-    <article id="top">
+    <article id="top" className="font-NanumGothic">
       <h1 className="text-3xl text-center p-5">제주도 소개</h1>
       <details className="border-2 m-3 p-2">
         <summary className="text-xl text-center">목차</summary>
@@ -66,22 +66,17 @@ function JejuInfo() {
         {/**본문 통일성 있게 수정해야됨 */}
         <Info title="제주도 요괴" id="요괴" image="https://search.pstatic.net/sunny/?src=https%3A%2F%2Ftimg.humoruniv.com%2Fthumb_crop_resize.php%3Furl%3Dhttps%3A%2F%2Fdown.humoruniv.com%2F%2Fhwiparambbs%2Fdata%2Feditor%2Ffear%2Fe_scd2e34002_2a9987691002565588518127a3e4e2079f7075d8.png%3FSIZE%3D680x685&type=a340">
           <p>
-            이름:그슴새
+            이름은 그슴새라고 한다. 옳지 못하다는 말을 뜻하는 그름과 비슷한 그슴과, 불길하고 악독한 기운을 뜻하는 새를 합친 것이다.
+            그슴새는 비바람을 조정하는 능력이 있어서 출몰할 때 먹구름이 끼고 비가 온다고 한다. 영혼을 홀려 정신이 나가게 하고 공포심을 증가시켜 스스로 죽게 만든다고 한다.
+            낮과 밤 상관없이 혼자있는 사람에게 간다고 한다.
+            그슴새는 제주도 전통 우비인 주젱이를 입고있다.
             <br />
-            의미:옳지 못하다는 말을 뜻하는 그름과 비슷한 그슴과 불길하고 악독한 기운을 뜻하는 새를 합친 것이다. 
-            <br />
-            능력:비바람을 조정하는 능력이 있어서 출몰할 때 먹구름이끼고 비가 온다고 한다.영혼을 홀려 정신을 나가게하고 공포심을 증가시켜 스스로 죽게 만든다고 한다.
-            <br />
-            특이사항:낮과 밤 상관없이 혼자있는 사람에게 간다고 한다.
-            <br />
-            외형:제주도 전통 우비인 주젱이를 입고있다.
-            <br />
-            유래:과거에 살인범들에게 주젱이를 씌웠는데, 살인범이 죽고 악귀가 되었다고 한다.
+            과거에 살인범들에게 주젱이를 씌웠는데, 살인범이 죽고 악귀가 되어 그슴새가 되었다고 한다.
           </p>
         </Info>
         <Info title="돌하르방" id="돌하르방" image="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMTlfODAg%2FMDAxNzAyOTEyODQ1MzM3.9wgcrpzE0meVlZq9Q96fzXnlXouBBDM7mFu-Lv5I3b4g.DFzUs-IP68Ua21hLo6O6TGD6I4tmjJpPMctGdy3pmtIg.PNG.cpgja0012%2FIMG_7919.PNG&type=a340">
           <p>
-            돌하르방의 종류는 손의 위치에 따라 상징하는 인물이 달라진다.
+            돌하르방은 손의 위치에 따라 상징하는 인물이 달라진다.
             <br /> 
             오른손이 왼손보다 위에 놓인 돌하르방은 문인을 상징한다.
             <br />
@@ -93,8 +88,7 @@ function JejuInfo() {
 
         <Info title="제주도 사투리" id="사투리" image="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAzMjFfMTM0%2FMDAxNjc5MzI3NzkyNDc1.OaSiAyKu2x12izDjAnaqmzBnBRrrN6ZV7ndUBiMMRVUg.05YJtsGsuE3mbZ2J7dQomJvSEiDKGVOGAhuMraa8Pk8g.JPEG.sayloveme12%2FIMG_1318.JPG&type=sc960_832">
           <p>
-            제주사투리는 타지역에서는 볼 수 없는 중세한국어 모습을 많이 유지하고 있다.
-            <br />
+            제주 사투리는 타 지역에서는 볼 수 없는 중세 한국어 모습을 많이 유지하고 있다.
             동시에 제주도만의 고유한 문법적 특징을 갖고 있어서 별개의 언어처럼 여겨진다.
           </p>
         </Info>

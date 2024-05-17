@@ -4,7 +4,7 @@ export default function OtherPlace({name, type, description, address}) {
             <details className="border-2 px-4 py-2">
                 <summary className="text-xl">{name}</summary>
                 <article className="">
-                    <img className="w-94 h-94 pb-3" src={require("../images/"+name+".jpg")} alt={name} />
+                    <img className="w-94 h-94 pb-3" src={require("../images/제주관광지60선/"+name+".jpg")} alt={name} />
                     <section>
                         <p className="text-base">
                             {description}

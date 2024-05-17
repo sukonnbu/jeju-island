@@ -404,7 +404,7 @@ function Home() {
   return (
     <>
     <Navbar />
-    <div className="flex justify-center">
+    <div className="flex justify-center font-NanumGothic">
       <select value={team} onChange={function (event) {
         setTeam(event.target.value)
       }} className="border-2">

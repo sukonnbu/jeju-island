@@ -4,7 +4,7 @@ function Credit() {
     return (
         <>
         <Navbar />
-        <article>
+        <article className="font-NanumGothic">
             <h2 className="text-2xl text-center">만든 사람들</h2>
             <article className="grid grid-cols-1 place-items-center p-14 space-y-10">
                 <section className="w-2/3">
