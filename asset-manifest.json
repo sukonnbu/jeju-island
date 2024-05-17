@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/jeju-island/static/css/main.f40a908d.css",
-    "main.js": "/jeju-island/static/js/main.ef3bdd43.js",
+    "main.css": "/jeju-island/static/css/main.c34f633a.css",
+    "main.js": "/jeju-island/static/js/main.ab92e2b9.js",
     "static/js/453.ed70b8ae.chunk.js": "/jeju-island/static/js/453.ed70b8ae.chunk.js",
+    "static/media/NanumBarunGothic.ttf": "/jeju-island/static/media/NanumBarunGothic.06c821535273ae7f7a51.ttf",
     "static/media/보롬왓.jpg": "/jeju-island/static/media/보롬왓.6598220b3b4cb5258a98.jpg",
     "static/media/서귀포치유의숲.jpg": "/jeju-island/static/media/서귀포치유의숲.a39c11f71fc075e9a4f7.jpg",
     "static/media/천제연폭포.jpg": "/jeju-island/static/media/천제연폭포.c9be56f0e93b7e048bbb.jpg",
@@ -16,6 +17,7 @@
     "static/media/메이즈랜드.jpg": "/jeju-island/static/media/메이즈랜드.9795b7fc73df807134b9.jpg",
     "static/media/정방폭포.jpg": "/jeju-island/static/media/정방폭포.57327d328f2c3bfdba0c.jpg",
     "static/media/황우지해안.jpg": "/jeju-island/static/media/황우지해안.58b7a844272c6a52d8e7.jpg",
+    "static/media/NanumSquareB.ttf": "/jeju-island/static/media/NanumSquareB.ebe0aa17b7967cd61f16.ttf",
     "static/media/중문관광단지.jpg": "/jeju-island/static/media/중문관광단지.c0420ee05580cc9a4e60.jpg",
     "static/media/아라고나이트 고온천(디아넥스호텔).jpg": "/jeju-island/static/media/아라고나이트 고온천(디아넥스호텔).af803fe0d90ae326c575.jpg",
     "static/media/애월한담해안산책로.jpg": "/jeju-island/static/media/애월한담해안산책로.d5a30ba8bd59e40cb38d.jpg",
@@ -46,6 +48,7 @@
     "static/media/사려니숲길.jpg": "/jeju-island/static/media/사려니숲길.42addc40461401523234.jpg",
     "static/media/오설록티뮤지엄.jpg": "/jeju-island/static/media/오설록티뮤지엄.2a3a9d0d269d517a86a6.jpg",
     "static/media/용두암.jpg": "/jeju-island/static/media/용두암.5cc2832be5a4d932e0bc.jpg",
+    "static/media/banner.jpg": "/jeju-island/static/media/banner.6a76a135792aba897729.jpg",
     "static/media/외돌개.jpg": "/jeju-island/static/media/외돌개.f8b21b237409850f232b.jpg",
     "static/media/1100고지습지.jpg": "/jeju-island/static/media/1100고지습지.071468970f6df5e0a50e.jpg",
     "static/media/섭지코지.jpg": "/jeju-island/static/media/섭지코지.bcf2c37d24cf6f8efac7.jpg",
@@ -63,12 +66,12 @@
     "static/media/거문오름(UNESCO 세계자연유산).jpg": "/jeju-island/static/media/거문오름(UNESCO 세계자연유산).64c73b7f8fb8d13a19e5.jpg",
     "static/media/이호테우말등대.jpg": "/jeju-island/static/media/이호테우말등대.42eb7c3d2fa6f90a95db.jpg",
     "index.html": "/jeju-island/index.html",
-    "main.f40a908d.css.map": "/jeju-island/static/css/main.f40a908d.css.map",
-    "main.ef3bdd43.js.map": "/jeju-island/static/js/main.ef3bdd43.js.map",
+    "main.c34f633a.css.map": "/jeju-island/static/css/main.c34f633a.css.map",
+    "main.ab92e2b9.js.map": "/jeju-island/static/js/main.ab92e2b9.js.map",
     "453.ed70b8ae.chunk.js.map": "/jeju-island/static/js/453.ed70b8ae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f40a908d.css",
-    "static/js/main.ef3bdd43.js"
+    "static/css/main.c34f633a.css",
+    "static/js/main.ab92e2b9.js"
   ]
 }
