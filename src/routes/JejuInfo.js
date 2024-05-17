@@ -21,7 +21,7 @@ function JejuInfo() {
       <div className="grid grid-cols-1 justify-items-center">
         <Info title="화산섬 제주도" id="화산섬">
           <p>
-            //
+            AI 왈, 화산섬은 제주도의 중심지인 제주시의 화산섬이다.
           </p>
         </Info>
 
@@ -60,10 +60,6 @@ function JejuInfo() {
           </p>
         </Info>
 
-        {/**본문 통일성 있게 수정해야됨 */}
-        {/**본문 통일성 있게 수정해야됨 */}
-        {/**본문 통일성 있게 수정해야됨 */}
-        {/**본문 통일성 있게 수정해야됨 */}
         <Info title="제주도 요괴" id="요괴" image="https://search.pstatic.net/sunny/?src=https%3A%2F%2Ftimg.humoruniv.com%2Fthumb_crop_resize.php%3Furl%3Dhttps%3A%2F%2Fdown.humoruniv.com%2F%2Fhwiparambbs%2Fdata%2Feditor%2Ffear%2Fe_scd2e34002_2a9987691002565588518127a3e4e2079f7075d8.png%3FSIZE%3D680x685&type=a340">
           <p>
             이름은 그슴새라고 한다. 옳지 못하다는 말을 뜻하는 그름과 비슷한 그슴과, 불길하고 악독한 기운을 뜻하는 새를 합친 것이다.

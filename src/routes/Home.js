@@ -398,6 +398,8 @@ function Home() {
         ASecondLine.setMap(null);
         AThirdLine.setMap(null);
         break;
+      default:
+        break;
     }
   }, [team]);
 

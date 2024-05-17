@@ -2,6 +2,7 @@ import React from 'react';
 import {Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './routes/Home';
 import JejuInfo from './routes/JejuInfo';
+import Schedule from './routes/Schedule';
 import PlaceInfo from './routes/PlaceInfo';
 import ItemInfo from './routes/ItemInfo';
 import Credit from './routes/Credit';
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/jejuinfo" element={<JejuInfo />} />
+        <Route path="/schedule" element={<Schedule />} />
         <Route path="/placeinfo" element={<PlaceInfo />} />
         <Route path="/iteminfo" element={<ItemInfo />} />
         <Route path="/credit" element={<Credit />} />
