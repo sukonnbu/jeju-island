@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jeju-island/static/css/main.c34f633a.css",
-    "main.js": "/jeju-island/static/js/main.ab92e2b9.js",
+    "main.css": "/jeju-island/static/css/main.7e16f10b.css",
+    "main.js": "/jeju-island/static/js/main.343d1ee0.js",
     "static/js/453.ed70b8ae.chunk.js": "/jeju-island/static/js/453.ed70b8ae.chunk.js",
     "static/media/NanumBarunGothic.ttf": "/jeju-island/static/media/NanumBarunGothic.06c821535273ae7f7a51.ttf",
     "static/media/보롬왓.jpg": "/jeju-island/static/media/보롬왓.6598220b3b4cb5258a98.jpg",
@@ -66,12 +66,12 @@
     "static/media/거문오름(UNESCO 세계자연유산).jpg": "/jeju-island/static/media/거문오름(UNESCO 세계자연유산).64c73b7f8fb8d13a19e5.jpg",
     "static/media/이호테우말등대.jpg": "/jeju-island/static/media/이호테우말등대.42eb7c3d2fa6f90a95db.jpg",
     "index.html": "/jeju-island/index.html",
-    "main.c34f633a.css.map": "/jeju-island/static/css/main.c34f633a.css.map",
-    "main.ab92e2b9.js.map": "/jeju-island/static/js/main.ab92e2b9.js.map",
+    "main.7e16f10b.css.map": "/jeju-island/static/css/main.7e16f10b.css.map",
+    "main.343d1ee0.js.map": "/jeju-island/static/js/main.343d1ee0.js.map",
     "453.ed70b8ae.chunk.js.map": "/jeju-island/static/js/453.ed70b8ae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c34f633a.css",
-    "static/js/main.ab92e2b9.js"
+    "static/css/main.7e16f10b.css",
+    "static/js/main.343d1ee0.js"
   ]
 }
