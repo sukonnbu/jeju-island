@@ -181,7 +181,7 @@ function Home() {
           clickable: true,
           zIndex: 2,
           xAnchor: 0.5,
-          yAnchor: 1.1
+          yAnchor: 1.5
         });
 
         kakaoAPI.event.addListener(marker, 'click', function() {
