@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/jeju-island/static/css/main.2e5956d3.css",
-    "main.js": "/jeju-island/static/js/main.34d0c53b.js",
+    "main.js": "/jeju-island/static/js/main.cab131cb.js",
     "static/js/453.ed70b8ae.chunk.js": "/jeju-island/static/js/453.ed70b8ae.chunk.js",
     "static/media/NanumBarunGothic.ttf": "/jeju-island/static/media/NanumBarunGothic.06c821535273ae7f7a51.ttf",
     "static/media/보롬왓.jpg": "/jeju-island/static/media/보롬왓.6598220b3b4cb5258a98.jpg",
@@ -67,11 +67,11 @@
     "static/media/이호테우말등대.jpg": "/jeju-island/static/media/이호테우말등대.42eb7c3d2fa6f90a95db.jpg",
     "index.html": "/jeju-island/index.html",
     "main.2e5956d3.css.map": "/jeju-island/static/css/main.2e5956d3.css.map",
-    "main.34d0c53b.js.map": "/jeju-island/static/js/main.34d0c53b.js.map",
+    "main.cab131cb.js.map": "/jeju-island/static/js/main.cab131cb.js.map",
     "453.ed70b8ae.chunk.js.map": "/jeju-island/static/js/453.ed70b8ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2e5956d3.css",
-    "static/js/main.34d0c53b.js"
+    "static/js/main.cab131cb.js"
   ]
 }
