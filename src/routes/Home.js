@@ -177,7 +177,7 @@ function Home() {
 
         const overlay = new kakaoAPI.CustomOverlay({
           position: coords,
-          content: '<div class="w-52 m-1 bg-emerald-500 border-2"><h3 class="text-xl text-center">' + pos.title + '</h3><div class="w-32 h-32 float-left"></div><span class="text-basic text-wrap">' + pos.content + '</span></div>',
+          content: '<div class="w-52 m-1 bg-emerald-500 border-2 border-emerald-700"><h3 class="text-xl text-center">' + pos.title + '</h3><span class="text-basic text-wrap p-1">' + pos.content + '</span></div>',
           clickable: true,
           zIndex: 2,
           xAnchor: 0.5,
