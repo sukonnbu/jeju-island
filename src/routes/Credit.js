@@ -14,7 +14,6 @@ function Credit() {
                         <li>20321 유현우</li>
                         <li>20322 이재영</li>
                         <li>20429 최현석</li>
-                        <li>20505 김성진</li>
                         <li>20808 김범수</li>
                     </ul>
                 </section>
