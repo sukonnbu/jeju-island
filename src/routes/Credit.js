@@ -14,7 +14,6 @@ function Credit() {
                         <li>20321 유현우</li>
                         <li>20322 이재영</li>
                         <li>20429 최현석</li>
-                        <li>20505 김성진</li>
                         <li>20808 김범수</li>
                     </ul>
                 </section>
@@ -28,20 +27,12 @@ function Credit() {
                 <section className="w-2/3">
                     <h3 className="text-xl text-center">웹페이지 제작</h3>
                     <ul>
-                        <li>20628 최지완</li>
+                        <li className="text-lg">20628 최지완<span className="line-through px-1">사실상 혼자 했어요</span></li>
                         <li>20730 최현우</li>
                         <li>20823 정승용</li>
                         <li>20829 탁준호</li>
                     </ul>
                 </section>
-
-                <section className="w-2/3">
-                    <h3 className="text-xl text-center">일러스트</h3>
-                    <ul>
-                        <li>20107 민경조</li>
-                    </ul>
-                </section>
-
 
                 <section className="w-2/3">
                     <h3 className="text-xl text-center">지도교사</h3>

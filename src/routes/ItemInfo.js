@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Item from "../components/Item";
+import MoveToTop from "../components/MoveToTop";
 
 function ItemInfo() {
   return (
@@ -55,6 +56,7 @@ function ItemInfo() {
           </p>
         </Item>
       </div>
+      <MoveToTop onClick={() => {window.scrollTo({top: 0, behavior: "smooth"})}} />
     </div>
     </>
   );

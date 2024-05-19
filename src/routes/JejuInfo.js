@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Info from "../components/Info";
 
+import MoveToTop from "../components/MoveToTop";
 function JejuInfo() {
   return (
     <>
@@ -90,6 +91,7 @@ function JejuInfo() {
         </Info>
       </div>
     </article>
+    <MoveToTop onClick={() => {window.scrollTo({top: 0, behavior: "smooth"})}} />
     </>
   );
 }

@@ -21,7 +21,7 @@ function Home() {
           Lat: 33.5059364682672,
           Lng: 126.495951277797
         },
-        content: ""
+        content: "공항"
       },
       {
         title: "WIND1947",
@@ -29,7 +29,7 @@ function Home() {
           Lat: 33.2895183041826,
           Lng: 126.588828203157
         },
-        content: ""
+        content: "한라산을 바라보며 즐기는 카트 레이싱"
       },
       {
         title: "외돌개",
@@ -37,7 +37,7 @@ function Home() {
           Lat: 33.240076867127,
           Lng: 126.54566394415,
         },
-        content: "<div style='width:150px;background-color:#BBDEFB;'><article><h3>외돌개</h3><section><img src='https://api.cdn.visitjeju.net/photomng/imgpath/202110/26/0a11cbe5-04e8-4871-8c2a-e3a874af4190.jpg' /></section></article></div>"
+        content: "올레길 7코스를 걸으며 즐기는 자연의 정취"
       },
       {
         title: "휴애리자연휴양림",
@@ -45,7 +45,7 @@ function Home() {
           Lat: 33.3085347525753,
           Lng: 126.634380832055
         },
-        content: ""
+        content: "한라산 풍경의 수국 꽃밭"
       },
       {
         title: "중문제트보트",
@@ -53,7 +53,7 @@ function Home() {
           Lat: 33.244946442101,
           Lng: 126.41891687589,
         },
-        content: ""
+        content: "주상절리를 따라 타는 빠른 제트보트"
       },
       {
         title: "제주라프체험",
@@ -61,7 +61,7 @@ function Home() {
           Lat: 33.4869065606552,
           Lng: 126.706132319352
         },
-        content: ""
+        content: "녹차밭 위를 가로지르는 짚라인"
       },
       {
         title: "제주레일바이크",
@@ -69,7 +69,7 @@ function Home() {
           Lat: 33.4646225230584,
           Lng: 126.836951495623
         },
-        content: ""
+        content: "철도를 따라 레일바이크를 타며 보는 목장과 오름의 풍경"
       },
       {
         title: "표선민속촌",
@@ -77,7 +77,7 @@ function Home() {
           Lat: 33.3212871409308,
           Lng: 126.843088213207
         },
-        content: ""
+        content: "제주도의 역사와 전통문화를 보여주는 민속촌"
       },
       {
         title: "넥슨컴퓨터박물관",
@@ -85,7 +85,7 @@ function Home() {
           Lat: 33.4721199545726,
           Lng: 126.485799750022
         },
-        content: ""
+        content: "컴퓨터 인재 양성을 위한 체험형 박물관"
       },
       {
         title: "이호테우해변",
@@ -93,7 +93,7 @@ function Home() {
           Lat: 33.4961965681116,
           Lng: 126.455892860155
         },
-        content: ""
+        content: "조랑말 등대가 유명한 해변"
       },
       {
         title: "용두암",
@@ -101,7 +101,7 @@ function Home() {
           Lat: 33.5148035919525,
           Lng: 126.511798046978
         },
-        content: ""
+        content: "용이 승천하는 형상의 현무암 구조물"
       },
       {
         title: "제주동문시장",
@@ -109,7 +109,7 @@ function Home() {
           Lat: 33.5115902822492,
           Lng: 126.526018218964
         },
-        content: ""
+        content: "제주도에서 가장 오래된 전통시장"
       },
       {
         title: "표선해비치해변",
@@ -117,7 +117,7 @@ function Home() {
           Lat: 33.3265291020204,
           Lng: 126.828739926647
         },
-        content: ""
+        content: "백사장이 아름다운 해변"
       },
       {
         title: "제주알제이",
@@ -125,7 +125,7 @@ function Home() {
           Lat: 33.4292988686855,
           Lng: 126.352722700715
         },
-        content: ""
+        content: "제주 자연의 재료를 토핑한 피자 만들기 체험"
       },
       {
         title: "신신호텔제주오션",
@@ -133,7 +133,7 @@ function Home() {
           Lat: 33.2459572185083,
           Lng: 126.562336279883
         },
-        content: ""
+        content: "A조 숙소. 방이 가장 넓고 즐기기 좋다고 한다."
       },
       {
         title: "스위트메이호텔서귀포",
@@ -141,7 +141,7 @@ function Home() {
           Lat: 33.2524815629392,
           Lng: 126.507548268061
         },
-        content: ""
+        content: "B조 숙소. 조식 뷔페가 다양하고 맛있다는 소문이 있다."
       },
       {
         title: "더퍼스트70호텔",
@@ -149,7 +149,7 @@ function Home() {
           Lat: 33.2472529671466,
           Lng: 126.566847661689
         },
-        content: ""
+        content: "C조 숙소. 무난하다."
       }
     ];
 
@@ -177,7 +177,7 @@ function Home() {
 
         const overlay = new kakaoAPI.CustomOverlay({
           position: coords,
-          content: pos.content,
+          content: '<div class="w-52 m-1 bg-emerald-500 border-2"><h3 class="text-xl text-center">' + pos.title + '</h3><div class="w-32 h-32 float-left"></div><span class="text-basic text-wrap">' + pos.content + '</span></div>',
           clickable: true,
           zIndex: 2,
           xAnchor: 0.5,
